@@ -1,12 +1,29 @@
-- 👋 Hi, I’m @manojmaske3531
-- 👀 I’m interested in ...Android
-- 🌱 I’m currently learning ... Android
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
 
-<!---
-manojmaske3531/manojmaske3531 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+class Calculator:
+    def __init__(self):
+        self.history = []
+
+    def add(self, num1, num2):
+        result = num1 + num2
+        self.history.append(f"{num1} + {num2} = {result}")
+        return result
+
+    def subtract(self, num1, num2):
+        result = num1 - num2
+        self.history.append(f"{num1} - {num2} = {result}")
+        return result
+
+    def multiply(self, num1, num2):
+        result = num1 * num2
+        self.history.append(f"{num1} * {num2} = {result}")
+        return result
+
+    def divide(self, num1, num2):
+        if num2 == 0:
+            raise ValueError("Cannot divide by zero!")
+        result = num1 / num2
+        self.history.append(f"{num1} / {num2} = {result}")
+        return result
+
+    def get_history(self):
+        return self.history
